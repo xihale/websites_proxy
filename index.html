@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Public - xihale</title>
+        <style>
+            html{
+                height: 100%;
+                width: 100%;
+            }
+            iframe{
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                border: none;
+            }
+        </style>
+    </head>
+    <body>
+        <iframe id="page" src=""></iframe>
+        <script>
+            const Page=`http://101.33.248.217:11801/`;
+            document.getElementById("page").src=Page+location.hash.slice(1);
+            window.addEventListener("load",()=>{
+                window.addEventListener("message",(e)=>{
+                    console.log(e.data);
+                    window.history.pushState({},0,location.origin+'#'+e.data);
+                });
+            });
+        </script>
+    </body>
+</html>
