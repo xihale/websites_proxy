@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Public - xihale</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <title>Website_proxy</title>
         <style>
             html{
                 height: 100%;
@@ -20,7 +21,7 @@
     <body>
         <iframe id="page" src=""></iframe>
         <script>
-            const Page=`http://101.33.248.217:11801/`;
+            const Page=`https://xihale.top/`;
             document.getElementById("page").src=Page+location.hash.slice(1);
             window.addEventListener("load",()=>{
                 window.addEventListener("message",(e)=>{
